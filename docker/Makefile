@@ -12,29 +12,30 @@ setup-elk:
 		cd docker-elk && git pull; \
 	else \
 		git clone https://github.com/deviantony/docker-elk; \
+		sed -i 's/tcp {/tcp {\n\t\tcodec => json/g' docker-elk/logstash/pipeline/logstash.conf; \
 	fi
-	sed -i 's/tcp {/tcp {\n\t\tcodec => json/g' docker-elk/logstash/pipeline/logstash.conf
-	docker-compose -f docker-elk/docker-compose.yml up -d
+	docker-compose -f docker-elk/docker-compose.yml up setup
+	docker-compose -f docker-elk/docker-compose.yml up --build -d
 
 # Redirect Kill Bill logs to Logstash using Logspout
 log-redirect:
 	@docker rm -f logspout || true
 	@if cat /proc/version | grep microsoft; then \
-		docker run --name="logspout" \
+		docker run  -itd --network=docker-elk_elk --name="logspout"  \
 			--volume=/var/run/docker.sock:/var/run/docker.sock \
 			gliderlabs/logspout \
-			'tcp://127.0.0.1:5000?filter.name=kb_killbill_1'; \
+			'tcp://docker-elk_logstash_1:50000?filter.name=kb_killbill_1'; \
 	elif [ "$$(uname)" = "Darwin" ]; then \
-		docker run --name="logspout" \
+		docker run -itd --network=docker-elk_elk --name="logspout" -d \
 			--volume=/var/run/docker.sock:/var/run/docker.sock \
 			gliderlabs/logspout \
-			'tcp://host.docker.internal:5000?filter.name=kb_killbill_1'; \
+			'tcp://host.docker.internal:50000?filter.name=kb_killbill_1'; \
 	else \
 		DOCKER_HOST_IP=$$(ip route | grep default | awk '{print $$3}'); \
-		docker run --name="logspout" \
+		docker run -itd --network=docker-elk_elk --name="logspout" -d \
 			--volume=/var/run/docker.sock:/var/run/docker.sock \
 			gliderlabs/logspout \
-			"tcp://$$DOCKER_HOST_IP:5000?filter.name=kb_killbill_1"; \
+			"tcp://$$DOCKER_HOST_IP:50000?filter.name=kb_killbill_1"; \
 	fi
 
 clean:
@@ -46,25 +47,18 @@ clean:
 	docker rm $$(docker ps -a -q --filter name=db) || true
 	docker stop $$(docker ps -a -q --filter name=influxdb) || true
 	docker rm $$(docker ps -a -q --filter name=influxdb) || true
-	docker stop $$(docker ps -a -q --filter name=logstash) || true
-	docker rm $$(docker ps -a -q --filter name=logstash) || true
-	docker stop $$(docker ps -a -q --filter name=elasticsearch) || true
-	docker rm $$(docker ps -a -q --filter name=elasticsearch) || true
-	docker stop $$(docker ps -a -q --filter name=kibana) || true
-	docker rm $$(docker ps -a -q --filter name=kibana) || true
+	docker-compose -f docker-elk/docker-compose.yml down || true
+	docker-compose -f docker-compose.kb.yml -p kb down || true
 	docker stop $$(docker ps -a -q --filter name=logspout) || true
 	docker rm $$(docker ps -a -q --filter name=logspout) || true
 
 
-# Setup Metrics infrastructure
-setup-metrics:
-	docker-compose -f -d docker-compose.gi.yml -p gi up -d
 
 configure-metrics:
 	sed -i 's/KILLBILL_METRICS_INFLUXDB=false/KILLBILL_METRICS_INFLUXDB=true/g' docker-compose.kb.yml
 	docker-compose -f docker-compose.kb.yml -p kb up -d
 
-all: quick-start setup-elk log-redirect setup-metrics configure-metrics
+all: quick-start setup-elk log-redirect configure-metrics
 
 
 # Print access information and credentials
@@ -75,4 +69,4 @@ info:
 	@echo "Grafana: http://127.0.0.1:3000/ - login: admin/admin"
 	@echo "InfluxDB: http://influxdb:8086/ - login: killbill/killbill"
 
-all: quick-start setup-elk log-redirect setup-metrics configure-metrics info
+all: quick-start setup-elk log-redirect configure-metrics info

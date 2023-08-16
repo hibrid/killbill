@@ -1,27 +1,50 @@
-# KB stack
 version: '3.2'
 volumes:
   db:
+  influxdb:
 services:
+  influxdb:
+    image: influxdb:1.8.3-alpine
+    volumes:
+      - type: volume
+        source: influxdb
+        target: /var/lib/influxdb
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+    environment:
+      - INFLUXDB_ADMIN_USER=killbill
+      - INFLUXDB_ADMIN_PASSWORD=killbill
+      - INFLUXDB_USER=killbill
+      - INFLUXDB_USER_PASSWORD=killbill
+      - INFLUXDB_DB=killbill
+    networks:
+      - elk
+  grafana:
+    image: grafana/grafana:7.2.0
+    ports:
+      - "3000:3000"
+    depends_on:
+      - influxdb
+    networks:
+      - elk
   killbill:
-    image: killbill/killbill:latest
+    image: killbill/killbill:0.24.3
     ports:
       - "8080:8080"
-      - "8000:8000"
-      - "12345:12345"
     environment:
       - KILLBILL_DAO_URL=jdbc:mysql://db:3306/killbill
       - KILLBILL_DAO_USER=root
       - KILLBILL_DAO_PASSWORD=killbill
-      - KILLBILL_METRICS_INFLUXDB=false
-      - KILLBILL_METRICS_INFLUXDB_HOST=host.docker.internal
+      - KILLBILL_METRICS_INFLUXDB=true
+      - KILLBILL_METRICS_INFLUXDB_HOST=influxdb
       - KILLBILL_METRICS_INFLUXDB_PORT=8086
   kaui:
-    image: killbill/kaui:latest
+    image: killbill/kaui:2.0.11
     ports:
       - "9090:8080"
     environment:
-      - KAUI_CONFIG_DAO_URL=jdbc:mariadb://db:3306/kaui
+      - KAUI_CONFIG_DAO_URL=jdbc:mysql://db:3306/kaui
       - KAUI_CONFIG_DAO_USER=root
       - KAUI_CONFIG_DAO_PASSWORD=killbill
       - KAUI_KILLBILL_URL=http://killbill:8080
@@ -33,7 +56,12 @@ services:
       - type: volume
         source: db
         target: /var/lib/mysql
+    ports:
+      - "3306:3306"
     expose:
       - "3306"
     environment:
       - MYSQL_ROOT_PASSWORD=killbill
+networks:
+  elk:
+    driver: bridge
