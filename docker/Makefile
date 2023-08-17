@@ -3,7 +3,7 @@
 
 # Quick start Kill Bill
 quick-start:
-	docker-compose -f docker-compose.kb.yml -p kb up -d
+	docker-compose -f docker-compose.yml -p kb up -d
 
 # Setup ELK for logging
 setup-elk:
@@ -48,15 +48,15 @@ clean:
 	docker stop $$(docker ps -a -q --filter name=influxdb) || true
 	docker rm $$(docker ps -a -q --filter name=influxdb) || true
 	docker-compose -f docker-elk/docker-compose.yml down || true
-	docker-compose -f docker-compose.kb.yml -p kb down || true
+	docker-compose -f docker-compose.yml -p kb down || true
 	docker stop $$(docker ps -a -q --filter name=logspout) || true
 	docker rm $$(docker ps -a -q --filter name=logspout) || true
 
 
 
 configure-metrics:
-	sed -i 's/KILLBILL_METRICS_INFLUXDB=false/KILLBILL_METRICS_INFLUXDB=true/g' docker-compose.kb.yml
-	docker-compose -f docker-compose.kb.yml -p kb up -d
+	sed -i 's/KILLBILL_METRICS_INFLUXDB=false/KILLBILL_METRICS_INFLUXDB=true/g' docker-compose.yml
+	docker-compose -f docker-compose.yml -p kb up -d
 
 all: quick-start setup-elk log-redirect configure-metrics
 
@@ -70,3 +70,17 @@ info:
 	@echo "InfluxDB: http://influxdb:8086/ - login: killbill/killbill"
 
 all: quick-start setup-elk log-redirect configure-metrics info
+
+cleanup-portproxy:
+	@echo "To clean up the portproxy setup in WSL, follow these steps:"
+	@echo "1. Open an admin-privileged PowerShell terminal."
+	@echo "2. Run the following command:"
+	@echo "   netsh interface portproxy delete v4tov4 listenport=42722 listenaddress=0.0.0.0"
+	@echo "This will remove the port proxy set up for communication between the Docker container and the WSL2 host."
+
+setup-portproxy:
+	@echo "To set up portproxy for WSL2, follow these steps:"
+	@echo "1. Open an admin-privileged PowerShell terminal."
+	@echo "2. Run the following command:"
+	@echo "   \$$wsl_ip = (wsl -d \"docker-desktop\" -- \"ifconfig\" \"eth0\" \"|\" \"grep\" \"inet addr:\").trim(\"\").split(\":\").split()[2]"
+	@echo "   netsh interface portproxy add v4tov4 listenport=42722 listenaddress=0.0.0.0 connectport=42722 connectaddress=\$$wsl_ip"
