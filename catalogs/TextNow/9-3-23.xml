@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://docs.killbill.io/latest/catalog.xsd">
+
+        <effectiveDate>2023-09-22T00:00:00+00:00</effectiveDate>
+
+        <catalogName>TextNow</catalogName>
+
+        <recurringBillingMode>IN_ADVANCE</recurringBillingMode>
+
+        <currencies>
+                <currency>USD</currency>
+        </currencies>
+
+        <products>
+            <product name="ADFREE_PLUS">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                </included>
+            </product>
+            <product name="ADFREE_LITE">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>PARTIAL_AD_REMOVAL</addonProduct>
+                </included>
+            </product>
+            <product name="ADFREE">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                </included>
+            </product>
+            <product name="PREMIUM_NUMBER">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>PREMIUM_NUMBER_CAP</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                </included>
+            </product>
+            <product name="LOCK_NUMBER">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                </included>
+            </product>
+            <product name="PERMANENT_LOCK_NUMBER">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_AD_SUPPORTED">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>DATA_ACCESS_NWTT</addonProduct>
+                    <addonProduct>DATA_SPEED_128_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_128_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_CAPACITY_UNLIMITED_MB</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_AD_LITE">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>DATA_ACCESS_NWTT</addonProduct>
+                    <addonProduct>DATA_SPEED_128_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_128_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_CAPACITY_UNLIMITED_MB</addonProduct>
+                    <addonProduct>PARTIAL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_SUBSCRIBER">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                </included>
+                <available>
+                    <addonProduct>DATA_SPEED_128_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_256_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_512_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_1024_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_2048_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_3072_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_5120_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_8192_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_13312_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_21504_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_34815_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_56320_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_DOWNLOAD</addonProduct>
+
+                    <addonProduct>DATA_SPEED_128_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_256_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_512_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_1024_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_2048_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_3072_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_5120_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_8192_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_13312_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_21504_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_34815_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_56320_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_UPLOAD</addonProduct>
+
+                    <addonProduct>DATA_THROTTLE_SPEED_128_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_256_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_512_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_1024_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_2048_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_3072_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_5120_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_8192_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_13312_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_21504_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_34815_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_56320_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_UNLIMITED_KBPS</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_BLOCK</addonProduct>
+
+                    <addonProduct>DATA_CAPACITY_250_MB</addonProduct>
+                    <addonProduct>DATA_CAPACITY_500_MB</addonProduct>
+                    <addonProduct>DATA_CAPACITY_1000_MB</addonProduct>
+                    <addonProduct>DATA_CAPACITY_2000_MB</addonProduct>
+                    <addonProduct>DATA_CAPACITY_3000_MB</addonProduct>
+                    <addonProduct>DATA_CAPACITY_5000_MB</addonProduct>
+                    <addonProduct>DATA_CAPACITY_7000_MB</addonProduct>
+                    <addonProduct>DATA_CAPACITY_UNLIMITED_MB</addonProduct>
+
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                    <addonProduct>DATA_ACCESS_NWTT</addonProduct>
+                    <addonProduct>DATA_ACCESS_ESSENTIALS</addonProduct>
+                    <addonProduct>DATA_ACCESS_EMPLOYEE</addonProduct>
+                    <addonProduct>DATA_ACCESS_EMPLOYEE_ONCALL</addonProduct>
+                    <addonProduct>DATA_ACCESS_FREE</addonProduct>
+                </available>
+            </product>
+            <product name="WIRELESS_NWTT">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>DATA_SPEED_128_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_128_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_128_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_UNLIMITED_MB</addonProduct>
+                    <addonProduct>DATA_ACCESS_NWTT</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_PASS_BROWSE">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_5120_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_1024_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_512_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_1000_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_PASS_STREAM">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_512_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_2000_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_250MB_THROTTLED">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_5120_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_5120_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_128_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_250_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_500MB_MID_THROTTLED">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_5120_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_5120_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_128_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_500_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_500MB_UNLIMITED_THROTTLED">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_128_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_500_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_500MB_BLOCK">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_5120_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_5120_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_BLOCK</addonProduct>
+                    <addonProduct>DATA_CAPACITY_500_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_1000MB_THROTTLED">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_128_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_1000_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_2000MB_THROTTLED">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_128_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_2000_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_3000MB_THROTTLED">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_128_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_3000_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_5000MB_THROTTLED">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_128_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_5000_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_7000MB_THROTTLED">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_128_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_7000_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="WIRELESS_PAID_23000MB_THROTTLED">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>WIRELESS</addonProduct>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                    <addonProduct>INFINITE_MEDIA_RETENTION</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_DOWNLOAD</addonProduct>
+                    <addonProduct>DATA_SPEED_UNLIMITED_KBPS_UPLOAD</addonProduct>
+                    <addonProduct>DATA_THROTTLE_SPEED_128_KBPS</addonProduct>
+                    <addonProduct>DATA_CAPACITY_23000_MB</addonProduct>
+                    <addonProduct>DATA_UNRESTRICTED</addonProduct>
+                </included>
+            </product>
+            <product name="TEXT_NOW_BONUS">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                </included>
+            </product>
+            <product name="TEXT_NOW_PLUS">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>PARTIAL_AD_REMOVAL</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                </included>
+            </product>
+
+            <product name="TEXT_NOW_PREMIUM">
+                <category>BASE</category>
+                <included>
+                    <addonProduct>FULL_AD_REMOVAL</addonProduct>
+                    <addonProduct>LOCK_IN_NUMBER</addonProduct>
+                    <addonProduct>VOICEMAIL_TRANSCRIPTION</addonProduct>
+                    <addonProduct>CALL_FORWARDING</addonProduct>
+                    <addonProduct>RECEIVE_VERIFICATION_CODE</addonProduct>
+                </included>
+            </product>
+
+            <product name="FULL_AD_REMOVAL">
+                <category>ADD_ON</category>
+            </product>
+            <product name="PARTIAL_AD_REMOVAL">
+                <category>ADD_ON</category>
+            </product>
+            <product name="PREMIUM_NUMBER_CAP">
+                <category>ADD_ON</category>
+            </product>
+            <product name="LOCK_IN_NUMBER">
+                <category>ADD_ON</category>
+            </product>
+            <product name="VOICEMAIL_TRANSCRIPTION">
+                <category>ADD_ON</category>
+            </product>
+            <product name="CALL_FORWARDING">
+                <category>ADD_ON</category>
+            </product>
+            <product name="WIRELESS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="RECEIVE_VERIFICATION_CODE">
+                <category>ADD_ON</category>
+            </product>
+            <product name="INFINITE_MEDIA_RETENTION">
+                <category>ADD_ON</category>
+            </product>
+
+            <product name="DATA_SPEED_128_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_256_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_512_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_1024_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_2048_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_3072_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_5120_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_8192_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_13312_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_21504_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_34815_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_56320_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_UNLIMITED_KBPS_DOWNLOAD">
+                <category>ADD_ON</category>
+            </product>
+
+            <product name="DATA_SPEED_128_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_256_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_512_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_1024_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_2048_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_3072_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_5120_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_8192_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_13312_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_21504_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_34815_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_56320_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_SPEED_UNLIMITED_KBPS_UPLOAD">
+                <category>ADD_ON</category>
+            </product>
+
+            <product name="DATA_THROTTLE_SPEED_128_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_256_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_512_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_1024_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_2048_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_3072_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_5120_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_8192_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_13312_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_21504_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_34815_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_56320_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_UNLIMITED_KBPS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_THROTTLE_SPEED_BLOCK">
+                <category>ADD_ON</category>
+            </product>
+
+            <product name="DATA_CAPACITY_250_MB">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_CAPACITY_500_MB">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_CAPACITY_1000_MB">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_CAPACITY_2000_MB">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_CAPACITY_3000_MB">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_CAPACITY_5000_MB">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_CAPACITY_7000_MB">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_CAPACITY_23000_MB">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_CAPACITY_UNLIMITED_MB">
+                <category>ADD_ON</category>
+            </product>
+
+
+            <product name="DATA_UNRESTRICTED">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_NOSTREAM">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_ACCESS_NWTT">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_ACCESS_ESSENTIALS">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_ACCESS_EMPLOYEE">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_ACCESS_EMPLOYEE_ONCALL">
+                <category>ADD_ON</category>
+            </product>
+            <product name="DATA_ACCESS_FREE">
+                <category>ADD_ON</category>
+            </product>
+
+        </products>
+
+        <rules>
+        <changePolicy>
+            <changePolicyCase>
+                <policy>IMMEDIATE</policy>
+            </changePolicyCase>
+        </changePolicy>
+        <changeAlignment>
+            <changeAlignmentCase>
+                <alignment>START_OF_BUNDLE</alignment>
+            </changeAlignmentCase>
+        </changeAlignment>
+        <cancelPolicy>
+            <cancelPolicyCase>
+                <policy>IMMEDIATE</policy>
+            </cancelPolicyCase>
+        </cancelPolicy>
+        <createAlignment>
+            <createAlignmentCase>
+                <alignment>START_OF_BUNDLE</alignment>
+            </createAlignmentCase>
+        </createAlignment>
+        <billingAlignment>
+            <billingAlignmentCase>
+                <alignment>ACCOUNT</alignment>
+            </billingAlignmentCase>
+        </billingAlignment>
+        <priceList>
+            <priceListCase>
+                <toPriceList>DEFAULT</toPriceList>
+            </priceListCase>
+        </priceList>
+    </rules>
+
+        <plans>
+            <plan name="nwtt-monthly">
+                <product>WIRELESS_AD_SUPPORTED</product>
+                <initialPhases>
+                </initialPhases>
+                <finalPhase type="EVERGREEN">
+                    <duration>
+                        <unit>UNLIMITED</unit>
+                    </duration>
+                    <recurring>
+                        <billingPeriod>MONTHLY</billingPeriod>
+                        <recurringPrice>
+                            <price>
+                                <currency>USD</currency>
+                                <value>0</value>
+                            </price>
+                        </recurringPrice>
+                    </recurring>
+                </finalPhase>
+            </plan>
+            <plan name="iap-addfree-plus-14day-trial-monthly">
+                <product>ADFREE_PLUS</product>
+                <initialPhases>
+                    <phase type="TRIAL">
+                        <duration>
+                            <unit>DAYS</unit>
+                            <number>14</number>
+                        </duration>
+                        <fixed>
+                            <fixedPrice> <!-- empty price implies $0 -->
+                            </fixedPrice>
+                        </fixed>
+                    </phase>
+                </initialPhases>
+                <finalPhase type="EVERGREEN">
+                    <duration>
+                        <unit>UNLIMITED</unit>
+                    </duration>
+                    <recurring>
+                        <billingPeriod>MONTHLY</billingPeriod>
+                        <recurringPrice>
+                            <price>
+                                <currency>USD</currency>
+                                <value>0</value> <!-- TODO: NEED PRICE -->
+                            </price>
+                        </recurringPrice>
+                    </recurring>
+                </finalPhase>
+            </plan>
+
+            <plan name="iap-addfree-plus-3day-trial-6.99-week">
+                <product>ADFREE_PLUS</product>
+                <initialPhases>
+                    <phase type="TRIAL">
+                        <duration>
+                            <unit>DAYS</unit>
+                            <number>3</number>
+                        </duration>
+                        <fixed>
+                            <fixedPrice> <!-- empty price implies $0 -->
+                            </fixedPrice>
+                        </fixed>
+                    </phase>
+                </initialPhases>
+                <finalPhase type="EVERGREEN">
+                    <duration>
+                        <unit>UNLIMITED</unit>
+                    </duration>
+                    <recurring>
+                        <billingPeriod>WEEKLY</billingPeriod>
+                        <recurringPrice>
+                            <price>
+                                <currency>USD</currency>
+                                <value>6.99</value> 
+                            </price>
+                        </recurringPrice>
+                    </recurring>
+                </finalPhase>
+            </plan>
+
+            <plan name="nwtt-ad-lite-monthly">
+                <product>WIRELESS_AD_LITE</product>
+                <initialPhases>
+                </initialPhases>
+                <finalPhase type="EVERGREEN">
+                    <duration>
+                        <unit>UNLIMITED</unit>
+                    </duration>
+                    <recurring>
+                        <billingPeriod>MONTHLY</billingPeriod>
+                        <recurringPrice>
+                            <price>
+                                <currency>USD</currency>
+                                <value>0</value>
+                            </price>
+                        </recurringPrice>
+                    </recurring>
+                </finalPhase>
+            </plan>
+            <plan name="nwtt-ad-lite-monthly">
+                <product>WIRELESS_AD_LITE</product>
+                <initialPhases>
+                </initialPhases>
+                <finalPhase type="EVERGREEN">
+                    <duration>
+                        <unit>UNLIMITED</unit>
+                    </duration>
+                    <recurring>
+                        <billingPeriod>MONTHLY</billingPeriod>
+                        <recurringPrice>
+                            <price>
+                                <currency>USD</currency>
+                                <value>0</value>
+                            </price>
+                        </recurringPrice>
+                    </recurring>
+                </finalPhase>
+            </plan>
+        </plans>
+</catalog>

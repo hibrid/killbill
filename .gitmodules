@@ -1,0 +1,3 @@
+[submodule "tools/utilities/tools/utilities/killbill"]
+	path = tools/utilities/tools/utilities/killbill
+	url = https://github.com/hibrid/kbcli.git

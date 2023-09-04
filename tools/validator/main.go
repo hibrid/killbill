@@ -27,8 +27,10 @@ func validateXMLAgainstXSD(xmlContent, xsdPath string) error {
 	defer doc.Free()
 
 	// Validate XML against schema
-	err = schema.Validate(doc)
-	if err != nil {
+	if err := schema.Validate(doc); err != nil {
+		for _, e := range err.(xsd.SchemaValidationError).Errors() {
+			log.Printf("error: %s", e.Error())
+		}
 		return fmt.Errorf("validation error: %v", err)
 	}
 

@@ -1,6 +1,6 @@
-module github.com/Enflick/killbill
+module github.com/Enflick/killbill/tools/utilities
 
-go 1.19
+go 1.21.0
 
 require (
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
@@ -18,13 +18,10 @@ require (
 	github.com/go-openapi/validate v0.22.1 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/killbill/kbcli v1.0.0 // indirect
-	github.com/killbill/kbcli/v3 v3.1.0 // indirect
-	github.com/lestrrat-go/libxml2 v0.0.0-20201123224832-e6d9de61b80d // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/oklog/ulid v1.3.1 // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 	go.mongodb.org/mongo-driver v1.12.1 // indirect
 	go.opentelemetry.io/otel v1.17.0 // indirect
 	go.opentelemetry.io/otel/metric v1.17.0 // indirect

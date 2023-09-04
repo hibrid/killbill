@@ -1,6 +1,6 @@
 .PHONY: all check-deps install-deps-debian install-deps-macos
 
-all: check-deps
+all: check-validator-deps
 
 check-validator-deps:
 ifeq ($(shell uname), Linux)
@@ -12,7 +12,7 @@ else
 endif
 
 install-validator-deps-debian:
-	@sudo apt-get update && sudo apt-get install -y libxml2-dev
+	@sudo apt-get update && sudo apt-get install -y build-essential libxml2 libxml2-dev
 
 install-validator-deps-macos:
 	@brew install libxml2

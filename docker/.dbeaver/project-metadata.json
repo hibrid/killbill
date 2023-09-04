@@ -1,0 +1,1 @@
+{"resources":{"Scripts/Script-1.sql":{"default-datasource":"mysql8-18a4ef6f7c2-3b3ec23d93e7bb40","default-catalog":"killbill"},"Scripts/Script.sql":{"default-datasource":"mysql8-18a4ef6f7c2-3b3ec23d93e7bb40","default-catalog":"killbill"},"Scripts/cleanAccount.sql":{"default-datasource":"mariaDB-18a4f21c16a-68f02d344b94b0e7","default-catalog":"killbill"}}}

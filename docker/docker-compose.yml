@@ -32,6 +32,7 @@ services:
     image: killbill/killbill:0.24.3
     ports:
       - "8080:8080"
+      - "42722:42722"
     expose:
       - "42722"
     environment:
